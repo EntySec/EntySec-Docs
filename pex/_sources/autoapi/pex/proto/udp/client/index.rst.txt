@@ -1,0 +1,38 @@
+:py:mod:`pex.proto.udp.client`
+==============================
+
+.. py:module:: pex.proto.udp.client
+
+
+Module Contents
+---------------
+
+.. py:class:: UDPClient(host: str, port: int, timeout: int = 10)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.udp module.
+
+   This subclass of pex.proto.udp module represents Python
+   implementation of the UDP client.
+
+   .. py:method:: send(data: bytes) -> None
+
+      Send data to the socket.
+
+      :param bytes data: data to send
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: recv(size: int) -> bytes
+
+      Read data from the socket.
+
+      :param int size: size of data
+      :return bytes: read data
+      :raises RuntimeError: with trailing error message
+
+
+

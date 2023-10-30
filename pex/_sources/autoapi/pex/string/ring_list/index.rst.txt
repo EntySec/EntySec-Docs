@@ -1,0 +1,57 @@
+:py:mod:`pex.string.ring_list`
+==============================
+
+.. py:module:: pex.string.ring_list
+
+
+Module Contents
+---------------
+
+.. py:class:: RingList(length: int)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.string module.
+
+   This subclass of pex.string module is intended for providing
+   RingList Python implementation.
+
+   .. py:method:: append(x: Any) -> None
+
+      Append an item to the list.
+
+      :param Any x: item to append
+      :return None: None
+
+
+   .. py:method:: get() -> collections.deque
+
+      Get the list.
+
+      :return collections.deque: list
+
+
+   .. py:method:: size() -> int
+
+      Get the size of the list.
+
+      :return int: size of the list
+
+
+   .. py:method:: maxsize() -> int
+
+      Get the max size of the list.
+
+      :return int: max size of the list
+
+
+   .. py:method:: __getitem__(n: int) -> Any
+
+      Get an item from list by its index.
+
+      :param int n: item index
+      :return Any: an item
+
+
+

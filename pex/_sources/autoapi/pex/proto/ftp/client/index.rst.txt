@@ -1,0 +1,54 @@
+:py:mod:`pex.proto.ftp.client`
+==============================
+
+.. py:module:: pex.proto.ftp.client
+
+
+Module Contents
+---------------
+
+.. py:class:: FTPClient(host: str, port: int, timeout: int = 10, ssl: bool = False)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.ftp module.
+
+   This subclass of pex.proto.ftp module represents Python
+   implementation of the FTP client.
+
+   .. py:method:: connect() -> None
+
+      Connect to FTP socket.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: close() -> None
+
+      Close FTP socket.
+
+      :return None: None
+      :raise RuntimeError: with trailing error message
+
+
+   .. py:method:: login(username: str, password: str) -> None
+
+      Login to the FTP socket.
+
+      :param str username: FTP username
+      :param str password: FTP password
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: get_file(remote_file: str) -> bytes
+
+      Get remote file from FTP socket.
+
+      :param str remote_file: remote file to get
+      :return bytes: remote file contents
+
+
+

@@ -1,0 +1,77 @@
+:py:mod:`pex.proto.chromecast.client`
+=====================================
+
+.. py:module:: pex.proto.chromecast.client
+
+
+Module Contents
+---------------
+
+.. py:class:: ChromecastClient(host: str, port: int = 8009)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.chromecast module.
+
+   This subclass of pex.proto.chromecast module represents Python
+   implementation of the Chromecast client.
+
+   .. py:method:: connect() -> None
+
+      Connect to Chromecast socket.
+
+      :return None: None
+
+
+   .. py:method:: disconnect() -> None
+
+      Disconnect from Chromecast socket.
+
+      :return None: None
+
+
+   .. py:method:: player_state() -> dict
+
+      Return player state.
+
+      :return dict: player state
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: play_media(url: str, format: str = 'video/mp4') -> None
+
+      Play media file from URL.
+
+      :param str url: URL to video file
+      :param str format: video file format
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: play() -> None
+
+      Tap play.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: pause() -> None
+
+      Tap pause.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: youtube_play(id: str) -> None
+
+      Play YouTube video.
+
+      :param str id: YouTube video ID
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+

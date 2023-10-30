@@ -1,0 +1,47 @@
+:py:mod:`pex.proto.tcp.tools`
+=============================
+
+.. py:module:: pex.proto.tcp.tools
+
+
+Module Contents
+---------------
+
+.. py:class:: TCPTools
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.tcp module.
+
+   This subclass of pex.proto.tcp module is intended for providing
+   some TCP tools.
+
+   .. py:method:: get_local_host() -> str
+      :staticmethod:
+
+      Get local host.
+
+      :return str: local host
+
+
+   .. py:method:: convert_to_local(host: str) -> str
+
+      Convert host to local / Parse local host.
+
+      :param str host: host to convert / parse
+      :return str: local host
+
+
+   .. py:method:: check_tcp_port(host: str, port: int, timeout: int = 1) -> bool
+      :staticmethod:
+
+      Check if TCP port is opened.
+
+      :param str host: host to check
+      :param int port: port to check
+      :param int timeout: check timeout
+      :return bool: True if opened else False
+
+
+

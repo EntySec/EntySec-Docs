@@ -1,0 +1,42 @@
+:py:mod:`pex.craft.x64`
+=======================
+
+.. py:module:: pex.craft.x64
+
+
+Module Contents
+---------------
+
+.. py:class:: X64
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.craft module.
+
+   This subclass of pex.craft module is intended for providing
+   implementations of some x64 CPU features and models.
+
+   .. py:method:: assemble(code: str) -> bytes
+
+      Assemble code for x64 architecture.
+
+      :param str code: code to assemble
+      :return bytes: assembled code for x64 architecture
+
+
+   .. py:method:: popad() -> bytes
+
+      Pack popad x64 assembler model.
+
+      :return bytes: packed popad x64 assembler model
+
+
+   .. py:method:: crash() -> bytes
+
+      Pack crash x64 assembler model.
+
+      :return bytes: packed crash x64 assembler model
+
+
+

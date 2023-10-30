@@ -1,0 +1,122 @@
+:py:mod:`pex.type.casting`
+==========================
+
+.. py:module:: pex.type.casting
+
+
+Module Contents
+---------------
+
+.. py:class:: Casting
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.type module.
+
+   This subclass of pex.type module is intended for providing
+   implementations of some type casting methods.
+
+   .. py:method:: is_mac(mac: str) -> bool
+      :staticmethod:
+
+      Check if string is a MAC address.
+
+      :param str mac: string to check
+      :return bool: True if string is a MAC address
+
+
+   .. py:method:: is_ipv4(ipv4: str) -> bool
+      :staticmethod:
+
+      Check if string is an IPv4 address.
+
+      :param str ipv4: string to check
+      :return bool: True if string is an IPv4 address
+
+
+   .. py:method:: is_ipv6(ipv6: str) -> bool
+      :staticmethod:
+
+      Check if string is an IPv6 address.
+
+      :param str ipv6: string to check
+      :return bool: True if string is an IPv6 address
+
+
+   .. py:method:: is_ip(ip: str) -> bool
+
+      Check if string is an IPv4 or an IPv6 address.
+
+      :param str ip: string to check
+      :return bool: True if string is an IPv4 or an IPv6 address
+
+
+   .. py:method:: is_ipv4_cidr(ipv4_cidr: str) -> bool
+
+      Check if string is an IPv4 cidr.
+
+      :param str ipv4_cidr: string to check
+      :return bool: True if string is an IPv4 cidr
+
+
+   .. py:method:: is_ipv6_cidr(ipv6_cidr: str) -> bool
+
+      Check if string is an IPv6 cidr.
+
+      :param str ipv6_cidr: string to check
+      :return bool: True if string is an IPv6 cidr
+
+
+   .. py:method:: is_port(port: int) -> bool
+
+      Check if integer is a port.
+
+      :param int port: integer to check
+      :return bool: True if integer is a port
+
+
+   .. py:method:: is_port_range(port_range: str) -> bool
+
+      Check if string is a port range.
+
+      :param str port_range: string to check
+      :return bool: True if string is a port range
+
+
+   .. py:method:: is_integer(value: str) -> bool
+      :staticmethod:
+
+      Check if string is an integer.
+
+      :param str value: string to check
+      :return bool: True if string is an integer else False
+
+
+   .. py:method:: is_float(value: str) -> bool
+      :staticmethod:
+
+      Check if string is a float.
+
+      :param str value: string to check
+      :return bool: True if string is a float else False
+
+
+   .. py:method:: is_number(value: str) -> bool
+
+      Check if string is a number (float/int).
+
+      :param str value: string to check
+      :return bool: True if string is a number else False
+
+
+   .. py:method:: is_boolean(value: str) -> bool
+      :staticmethod:
+
+      Check if string is a boolean (yes/no/y/n).
+
+      :param str value: string to check
+      :return bool: True if string is a boolean else False
+
+
+

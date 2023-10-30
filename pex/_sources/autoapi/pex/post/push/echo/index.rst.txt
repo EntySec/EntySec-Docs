@@ -1,0 +1,31 @@
+:py:mod:`pex.post.push.echo`
+============================
+
+.. py:module:: pex.post.push.echo
+
+
+Module Contents
+---------------
+
+.. py:class:: Echo
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.post.push module.
+
+   This subclass of pex.post.push module is intended for providing
+   implementation of echo method of pushing file to sender.
+
+   .. py:method:: push(sender: Callable[Ellipsis, Any], data: bytes, location: str, linemax: int = 100) -> None
+
+      Push file to sender using bash echo method.
+
+      :param Callable[..., Any] sender: sender to push file to
+      :param bytes data: data to push to file on sender
+      :param str location: location of file to push data to
+      :param int linemax: max command line size for each chunk
+      :return None: None
+
+
+

@@ -1,0 +1,50 @@
+:py:mod:`pex.fs`
+================
+
+.. py:module:: pex.fs
+
+
+Package Contents
+----------------
+
+.. py:class:: FS
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.fs module.
+
+   This main class of pex.fs module is intended for providing
+   implementations of filesystem features.
+
+   .. py:method:: exists(path: str) -> Tuple[bool, bool]
+      :staticmethod:
+
+      Check if path exist in the filesystem.
+
+      :param str path: path to check
+      :return Tuple[bool, bool]: first entry is True if path exists
+          second entry is True if path is directory
+
+
+   .. py:method:: check_dir(path: str) -> None
+      :staticmethod:
+
+      Check if directory exist in the filesystem.
+
+      :param str path: path to check
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: check_file(path: str) -> None
+      :staticmethod:
+
+      Check if file exist in the filesystem.
+
+      :param str path: path to check
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+

@@ -1,0 +1,44 @@
+:py:mod:`pex.proto.adb.client`
+==============================
+
+.. py:module:: pex.proto.adb.client
+
+
+Module Contents
+---------------
+
+.. py:class:: ADBClient(host: str, port: int, timeout: int = 10)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.adb module.
+
+   This subclass of pex.proto.adb module represents the Python
+   implementation of the Android Debug Bridge client.
+
+   .. py:method:: connect() -> None
+
+      Connect to the socket pair.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: disconnect() -> None
+
+      Disconnect the socket.
+
+      :return None: None
+
+
+   .. py:method:: send_command(command: str) -> str
+
+      Send command to the socket.
+
+      :param str command: command to send
+      :return str: command output
+      :raises RuntimeError: with trailing error message
+
+
+

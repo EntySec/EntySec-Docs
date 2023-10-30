@@ -1,0 +1,41 @@
+:py:mod:`pex.post.method`
+=========================
+
+.. py:module:: pex.post.method
+
+
+Module Contents
+---------------
+
+.. py:class:: Method
+
+
+   Bases: :py:obj:`NamedTuple`
+
+   .. py:attribute:: name
+      :type: str
+
+      
+
+   .. py:attribute:: platform
+      :type: pex.platform.types.Platform
+
+      
+
+   .. py:attribute:: handler
+      :type: pex.platform.types.Any
+
+      
+
+
+.. py:function:: select_method(methods: list, platform: Union[pex.platform.types.Platform, str], method: str = '') -> Union[Method, None]
+
+   Select appropriate method for platform
+   or check if method compatible.
+
+   :param list methods: list of methods
+   :param Union[Platform, str] platform: platform to check compatibility with
+   :param str method: method to check if presented
+   :return Method: method
+
+

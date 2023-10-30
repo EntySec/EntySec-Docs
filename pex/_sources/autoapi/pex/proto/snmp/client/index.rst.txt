@@ -1,0 +1,31 @@
+:py:mod:`pex.proto.snmp.client`
+===============================
+
+.. py:module:: pex.proto.snmp.client
+
+
+Module Contents
+---------------
+
+.. py:class:: SNMPClient(host: str, port: int, timeout: int = 15)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.snmp module.
+
+   This subclass of pex.proto.snmp module represents Python
+   implementation of the SNMP client.
+
+   .. py:method:: get(community: str, oid: str, version: int = 1, retries: int = 0) -> bytes
+
+      Get OID from SNMP server.
+
+      :param str community: SNMP server community string
+      :param str oid: SNMP server oid
+      :param int version: SNMP protocol version
+      :param int retries: number of retries
+      :return bytes: SNMP server response
+
+
+

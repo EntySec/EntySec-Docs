@@ -1,0 +1,16 @@
+:py:mod:`pex.nop`
+=================
+
+.. py:module:: pex.nop
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   opty2/index.rst
+   opty2_tables/index.rst
+
+

@@ -1,0 +1,38 @@
+:py:mod:`pex.exe.macho`
+=======================
+
+.. py:module:: pex.exe.macho
+
+
+Module Contents
+---------------
+
+.. py:class:: Macho
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.exe module.
+
+   This subclass of pex.exe module is intended for providing
+   an implementation of macOS macho generator.
+
+   .. py:method:: check_macho(data: bytes) -> bool
+
+      Check if data is a macOS macho.
+
+      :param bytes data: data to check
+      :return bool: True if data is a macOS macho
+
+
+   .. py:method:: pack_macho(arch: Union[pex.arch.types.Arch, str], data: bytes) -> bytes
+
+      Pack data to a macOS macho.
+
+      :param Union[Arch, str] arch: architecture to pack for
+      :param bytes data: data to pack
+      :return bytes: packed macOS macho
+      :raises RuntimeError: with trailing error message
+
+
+

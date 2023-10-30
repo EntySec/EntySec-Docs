@@ -1,0 +1,30 @@
+:py:mod:`pex.post.pull.dd`
+==========================
+
+.. py:module:: pex.post.pull.dd
+
+
+Module Contents
+---------------
+
+.. py:class:: DD
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.post.pull module.
+
+   This subclass of pex.post.pull module is intended for providing
+   implementation of dd method of pulling file from sender.
+
+   .. py:method:: pull(sender: Callable[Ellipsis, Any], location: str) -> bytes
+
+      Pull file from sender using dd method.
+
+      :param Callable[..., Any] sender: sender to pull file from
+      :param str location: location of file to pull
+      :return bytes: file data
+      :raises RuntimeError: with trailing error message
+
+
+

@@ -1,0 +1,47 @@
+:py:mod:`pex.text`
+==================
+
+.. py:module:: pex.text
+
+
+Package Contents
+----------------
+
+.. py:class:: Text
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.text module.
+
+   This main class of pex.text module is intended for providing
+   implementations of tools for working with various text data.
+
+   .. py:method:: block_api_hash(mod: str, fun: str) -> str
+
+      Calculate the block API hash for the given module/function.
+
+      :param str mod: the name of the module containing the target function
+      :param str fun: the name of the function
+      :return str: the hash of the mod/fun pair in string format
+
+
+   .. py:method:: ror13_hash(name: str) -> bytes
+
+      Calculate the ROR13 hash of a given string.
+
+      :param str name: string
+      :return bytes: ROR13 hash
+
+
+   .. py:method:: ror(val: int, cnt: int) -> int
+      :staticmethod:
+
+      Rotate value.
+
+      :param int val: value
+      :param int cnt: count
+      :return int: rotated value
+
+
+

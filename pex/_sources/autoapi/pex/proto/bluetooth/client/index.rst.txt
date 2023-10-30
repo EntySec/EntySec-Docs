@@ -1,0 +1,46 @@
+:py:mod:`pex.proto.bluetooth.client`
+====================================
+
+.. py:module:: pex.proto.bluetooth.client
+
+
+Module Contents
+---------------
+
+.. py:class:: BTLEOptions(buffering, mac, enum_services)
+
+
+   Bases: :py:obj:`object`
+
+
+.. py:class:: ScanDelegate(options)
+
+
+   Bases: :py:obj:`bluepy.btle.DefaultDelegate`
+
+   .. py:method:: handleDiscovery(dev, isNewDev, isNewData)
+
+
+
+.. py:class:: BTLEScanner(mac=None, iface=0)
+
+
+   Bases: :py:obj:`bluepy.btle.Scanner`
+
+   .. py:method:: _decode_address(resp)
+
+
+   .. py:method:: _find_or_create(addr)
+
+
+   .. py:method:: process(timeout=10.0)
+
+
+
+.. py:class:: BluetoothClient
+
+
+   .. py:method:: btle_scan(buffering=False, enum_services=False, time=10, mac=None)
+
+
+

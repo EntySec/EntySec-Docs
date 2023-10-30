@@ -1,0 +1,31 @@
+:py:mod:`pex.nop.opty2`
+=======================
+
+.. py:module:: pex.nop.opty2
+
+
+Module Contents
+---------------
+
+.. py:class:: Opty2
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.nop module.
+
+   This subclass of pex.nop module is intended for providing
+   an implementation of Opty2 NOP sled generator.
+
+   .. py:method:: generate_sled(length: int, save_registers: list = [], badchars: bytes = b'') -> bytes
+
+      Generate Opty2 NOP sled.
+
+      :param int length: length of a generated NOP sled
+      :param list save_registers: list of registers to save
+      :param bytes badchars: chars to avoid while generating NOP sled
+      :return bytes: generated Opty2 NOP sled
+      :raises RuntimeError: with trailing error message
+
+
+

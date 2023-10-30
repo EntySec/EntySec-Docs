@@ -1,0 +1,57 @@
+:py:mod:`pex.arch.sparc`
+========================
+
+.. py:module:: pex.arch.sparc
+
+
+Module Contents
+---------------
+
+.. py:class:: Sparc
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.arch module.
+
+   This subclass of pex.arch module is intended for providing
+   implementations of some sparc architecture features.
+
+   .. py:method:: sethi(const: int, dest: str) -> bytes
+
+      Pack sethi sparc assembler instruction.
+
+      :param int const: constant, can be an address
+      :param str dest: destination register name
+      :return bytes: packed sethi sparc assembler instruction
+
+
+   .. py:method:: ori(src: str, const: int, dest: str) -> bytes
+
+      Pack ori sparc assembler instruction.
+
+      :param str src: source register name
+      :param int const: constant, can be an address
+      :param str dest: destination register name
+      :return bytes: packed ori sparc assembler instruction
+
+
+   .. py:method:: set(const: int, dest: str) -> bytes
+
+      Pack sparc assembler instruction sethi or ori depending on const size.
+
+      :param int const: constant, can be an address
+      :param str dest: destination register name
+      :return bytes: packed sethi or ori sparc assembler instruction
+
+
+   .. py:method:: set_dword(const: int, dest: str) -> bytes
+
+      Pack sparc assembler instruction sethi and ori with const as double word.
+
+      :param int const: constant, can be an address
+      :param str dest: destination register name
+      :return bytes: packed sethi and ori sparc assembler instruction
+
+
+

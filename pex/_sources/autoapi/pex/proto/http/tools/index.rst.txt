@@ -1,0 +1,32 @@
+:py:mod:`pex.proto.http.tools`
+==============================
+
+.. py:module:: pex.proto.http.tools
+
+
+Module Contents
+---------------
+
+.. py:class:: HTTPTools
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.http module.
+
+   This subclass of pex.proto.http module is intended for providing
+   some HTTP tools.
+
+   .. py:method:: normalize_url(host: str, port: int, path: str, ssl: bool = False) -> str
+      :staticmethod:
+
+      Normalize URL.
+
+      :param str host: HTTP host
+      :param int port: HTTP port
+      :param str path: HTTP path
+      :param bool ssl: True if HTTP uses SSL else False
+      :return str: normalized URL
+
+
+

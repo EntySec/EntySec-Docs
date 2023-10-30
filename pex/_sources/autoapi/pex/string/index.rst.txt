@@ -1,0 +1,109 @@
+:py:mod:`pex.string`
+====================
+
+.. py:module:: pex.string
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   bit_reader/index.rst
+   lzs_decompress/index.rst
+   ring_list/index.rst
+
+
+Package Contents
+----------------
+
+.. py:class:: String
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.string module.
+
+   This main class of pex.string module is intended for providing
+   implementations of some string features and methods.
+
+   .. py:method:: extract_strings(binary_data: str) -> list
+      :staticmethod:
+
+      Extract strings from binary data.
+
+      :param str binary_data: data to extract strings from
+      :return list: list of extracted strings
+
+
+   .. py:method:: xor_string(string: str) -> str
+      :staticmethod:
+
+      Perform XOR encryption on a string.
+
+      :param str string: string to perform XOR encryption on
+      :return str: XOR encrypted string
+
+
+   .. py:method:: xor_key_string(string: str, key: str) -> str
+      :staticmethod:
+
+      Perform key XOR encryption on a string.
+
+      :param str string: string to perform key XOR encryption on
+      :param str key: key to encrypt with
+      :return str: key XOR encrypted string
+
+
+   .. py:method:: xor_key_bytes(buffer: bytes, key: bytes) -> bytes
+      :staticmethod:
+
+      Perform key XOR encryption on a bytes buffer.
+
+      :param bytes buffer: buffer to perform key XOR encryption on
+      :param bytes key: key to encrypt with
+      :return bytes: key XOR encrypted buffer
+
+
+   .. py:method:: base64_decode(string: str, decode: bool = True) -> Union[str, bytes]
+      :staticmethod:
+
+      Decode base64 encoded string.
+
+      :param str string: base64 encoded string to decode
+      :param bool decode: decode the result from bytes to str or not
+      :return Union[str, bytes]: decoded result in type depending on decode param
+
+
+   .. py:method:: base64_string(string: Union[str, bytes], decode: bool = True) -> Union[str, bytes]
+      :staticmethod:
+
+      Encode string with base64.
+
+      :param Union[str, bytes] string: string or bytes to encode with base64
+      :param bool decode: decode the result from bytes to str or not
+      :return Union[str, bytes]: decoded result in type depending on decode param
+
+
+   .. py:method:: random_string(length: int = 16, alphabet: list = string.ascii_letters + string.digits) -> str
+      :staticmethod:
+
+      Generated random string with specified length.
+
+      :param int length: length of a generated string
+      :param list alphabet: string alphabet to generate from
+      :return str: generated string
+
+
+   .. py:method:: lzs_decompress(data: bytes, window: ring_list.RingList = RingList(2048)) -> tuple
+      :staticmethod:
+
+      Decompress LZS compressed data.
+
+      :param bytes data: LZS compressed data to decompress
+      :param RingList window: RingList list
+      :return tuple: decompressed data and RingList
+
+
+

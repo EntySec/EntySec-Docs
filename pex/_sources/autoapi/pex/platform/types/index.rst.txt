@@ -1,0 +1,94 @@
+:py:mod:`pex.platform.types`
+============================
+
+.. py:module:: pex.platform.types
+
+
+Module Contents
+---------------
+
+.. py:class:: Platform(name: str, alter_names: list = [], exec: Optional[str] = None, sub_sets: list = [])
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.platform.types module.
+
+   This subclass of pex.platform.types module is intended for providing
+   an implementation of platform descriptor.
+
+   .. py:method:: __hash__() -> int
+
+      Make this architecture hashable.
+
+      :return int: architecture hash
+
+
+   .. py:method:: __add__(platform: Any) -> Any
+
+      Add platform to current platform sub sets.
+
+      :param Any platform: platform to add
+      :return Any: updated platform
+
+
+   .. py:method:: __sub__(platform: Any) -> Any
+
+      Remove platform from current sub sets.
+
+      :param Any platform: platform to remove
+      :return Any: updated platform
+
+
+   .. py:method:: __str__() -> str
+
+      Covert to string.
+
+      :return str: platform name
+
+
+   .. py:method:: __contains__(platform: Any) -> bool
+
+      Check if platform is a sub set of current one.
+
+      :param Any platform: can be platform name of alternative name
+      :return bool: True if contains else False
+
+
+   .. py:method:: __eq__(platform: Any) -> bool
+
+      Check if platform compatible with current one.
+
+      :param Any platform: can be platform name or alternative name
+      :return bool: True if compatible else False
+
+
+
+.. py:data:: OS_ANDROID
+
+   
+
+.. py:data:: OS_MACOS
+
+   
+
+.. py:data:: OS_WINDOWS
+
+   
+
+.. py:data:: OS_LINUX
+
+   
+
+.. py:data:: OS_IPHONE
+
+   
+
+.. py:data:: OS_UNIX
+
+   
+
+.. py:data:: OS_GENERIC
+
+   
+

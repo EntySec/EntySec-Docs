@@ -1,0 +1,57 @@
+:py:mod:`pex.post`
+==================
+
+.. py:module:: pex.post
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   pull/index.rst
+   push/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   method/index.rst
+   tools/index.rst
+
+
+Package Contents
+----------------
+
+.. py:class:: Post
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.post module.
+
+   This main class of pex.post module is intended for providing
+   an implementation of post function that sends a data to the target.
+
+   .. py:method:: post(payload: Union[bytes, str], sender: Callable[Ellipsis, pex.arch.types.Any], platform: Union[pex.platform.types.Platform, str], arch: Union[pex.arch.types.Arch, str], arguments: pex.arch.types.Optional[str] = None, method: pex.arch.types.Optional[str] = None, location: pex.arch.types.Optional[str] = None, concat: pex.arch.types.Optional[str] = None, background: pex.arch.types.Optional[str] = None, *args, **kwargs) -> None
+
+      Post a payload through the sender function.
+
+      :param Union[bytes, str] payload: payload to post
+      :param Callable[..., Any] sender: sender function to send payload to
+      :param Union[Platform, str] platform: target platform
+      :param Union[Arch, str] arch: target architecture
+      :param Optional[str] arguments: payload arguments
+      :param Optional[str] method: post method to use
+      :param Optional[str] location: path to save payload
+      :param Optional[str] concat: post command concat operator
+      :param Optional[str] background: post command background operator
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+

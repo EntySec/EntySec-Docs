@@ -1,0 +1,129 @@
+:py:mod:`pex.arch.types`
+========================
+
+.. py:module:: pex.arch.types
+
+
+Module Contents
+---------------
+
+.. py:class:: Arch(name: str, endian: str = 'little', bits: int = 64, alter_names: list = [], interpreter: Optional[str] = None, sub_sets: list = [])
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.arch.types module.
+
+   This subclass of pex.arch.types module is intended for providing
+   an implementation of architecture descriptor.
+
+   .. py:method:: __add__(arch: Any) -> Any
+
+      Add architecture to current architecture sub sets.
+
+      :param Any arch: architecture to add
+      :return Any: updated architecture
+
+
+   .. py:method:: __sub__(arch: Any) -> Any
+
+      Remove architecture from current sub sets.
+
+      :param Any arch: architecture to remove
+      :return Any: updated architecture
+
+
+   .. py:method:: __len__() -> int
+
+      Get bits.
+
+      :return int: number of bits (32 or 64)
+
+
+   .. py:method:: __hash__() -> int
+
+      Make this architecture hashable.
+
+      :return int: architecture hash
+
+
+   .. py:method:: __str__() -> str
+
+      Covert to string.
+
+      :return str: architecture name
+
+
+   .. py:method:: __contains__(arch: Any) -> bool
+
+      Check if architecture is a sub set of current one.
+
+      :param Any arch: can be architecture name of alternative name
+      :return bool: True if contains else False
+
+
+   .. py:method:: __eq__(arch: Any) -> bool
+
+      Check if architecture compatible with current one.
+
+      :param Any arch: can be arch name or alternative name
+      :return bool: True if compatible else False
+
+
+
+.. py:data:: ARCH_PYTHON
+
+   
+
+.. py:data:: ARCH_PHP
+
+   
+
+.. py:data:: ARCH_PERL
+
+   
+
+.. py:data:: ARCH_RUBY
+
+   
+
+.. py:data:: ARCH_BASH
+
+   
+
+.. py:data:: ARCH_APPLESCRIPT
+
+   
+
+.. py:data:: ARCH_X64
+
+   
+
+.. py:data:: ARCH_X86
+
+   
+
+.. py:data:: ARCH_AARCH64
+
+   
+
+.. py:data:: ARCH_ARMLE
+
+   
+
+.. py:data:: ARCH_ARMBE
+
+   
+
+.. py:data:: ARCH_MIPSLE
+
+   
+
+.. py:data:: ARCH_MIPSBE
+
+   
+
+.. py:data:: ARCH_GENERIC
+
+   
+

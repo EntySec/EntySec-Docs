@@ -1,0 +1,15 @@
+:py:mod:`pex.exe.syringe`
+=========================
+
+.. py:module:: pex.exe.syringe
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   macho/index.rst
+
+

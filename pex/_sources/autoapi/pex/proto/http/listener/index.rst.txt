@@ -1,0 +1,66 @@
+:py:mod:`pex.proto.http.listener`
+=================================
+
+.. py:module:: pex.proto.http.listener
+
+
+Module Contents
+---------------
+
+.. py:class:: Handler(*args, directory=None, **kwargs)
+
+
+   Bases: :py:obj:`http.server.SimpleHTTPRequestHandler`
+
+   Subclass of pex.proto.http module.
+
+   This subclass of pex.proto.http module represents
+   HTTP handler for web server.
+
+   .. py:method:: log_request(fmt, *args) -> None
+
+      Log an accepted request.
+
+      This is called by send_response().
+
+
+
+   .. py:method:: send_status(code: int = 200) -> None
+
+
+
+.. py:class:: HTTPListener(host: str, port: int, methods: dict = {})
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.http module.
+
+   This subclass of pex.proto.http module represents Python
+   implementation of HTTP listener.
+
+   .. py:method:: listen() -> None
+
+      Start HTTP listener.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: stop() -> None
+
+      Stop HTTP listener.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: accept() -> None
+
+      Accept connection.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+

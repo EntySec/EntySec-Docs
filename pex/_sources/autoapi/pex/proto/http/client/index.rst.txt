@@ -1,0 +1,35 @@
+:py:mod:`pex.proto.http.client`
+===============================
+
+.. py:module:: pex.proto.http.client
+
+
+Module Contents
+---------------
+
+.. py:class:: HTTPClient
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.http module.
+
+   This subclass of pex.proto.http module represents Python
+   implementation of the HTTP socket.
+
+   .. py:method:: http_request(method: str, host: str, port: int, path: str = '/', ssl: bool = False, timeout: int = 10, output: bool = True, session: Any = requests, **kwargs) -> Union[str, None]
+
+      Send HTTP request.
+
+      :param str method: HTTP method (GET, POST, DELETE, HEAD, OPTIONS)
+      :param str host: HTTP host
+      :param int port: HTTP port
+      :param str path: HTTP path
+      :param bool ssl: True if HTTP uses SSL else False
+      :param int timeout: connection timeout
+      :param bool output: True if wait for output else False
+      :param Any session: request handler
+      :return Union[str, None]: output if output is True else None
+
+
+

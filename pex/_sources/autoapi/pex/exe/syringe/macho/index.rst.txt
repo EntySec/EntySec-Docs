@@ -1,0 +1,20 @@
+:py:mod:`pex.exe.syringe.macho`
+===============================
+
+.. py:module:: pex.exe.syringe.macho
+
+
+Module Contents
+---------------
+
+.. py:class:: Macho
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.exe.syringe module.
+
+   This subclass of pex.exe.syringe is intended in providing
+   a macho executable injector.
+
+

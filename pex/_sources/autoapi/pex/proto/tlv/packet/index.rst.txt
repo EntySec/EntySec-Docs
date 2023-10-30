@@ -1,0 +1,102 @@
+:py:mod:`pex.proto.tlv.packet`
+==============================
+
+.. py:module:: pex.proto.tlv.packet
+
+
+Module Contents
+---------------
+
+.. py:class:: TLVPacket(buffer: bytes = b'', endian: str = 'little')
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.tlv module.
+
+   This subclass of pex.proto.tlv module is intended for providing
+   an implementation of TLV protocol stack.
+
+   .. py:method:: __add__(packet: Any) -> Any
+
+      Add one packet to the current packet.
+
+      :param Any packet: TLV packet to add
+      :return Any: new TLV packet
+
+
+   .. py:method:: __sub__(packet: Any) -> Any
+
+      Remove one packet from the current packet.
+
+      :param Any packet: TLV packet to remove
+      :return Any: new TLV packet
+
+
+   .. py:method:: __len__() -> int
+
+      Get count of TLV objects.
+
+      :return int: count of TLV objects
+
+
+   .. py:method:: get_raw(type: int) -> bytes
+
+      Get raw data from packet.
+
+      :param int type: type
+      :return bytes: raw value
+
+
+   .. py:method:: get_string(type: int) -> str
+
+      Get string from packet.
+
+      :param int type: type
+      :return str: string
+
+
+   .. py:method:: get_int(type: int) -> Union[int, None]
+
+      Get integer from packet.
+
+      :param int type: type
+      :return Union[int, None]: integer
+
+
+   .. py:method:: add_raw(type: int, value: bytes) -> None
+
+      Add raw data to packet.
+
+      :param int type: type
+      :param bytes value: value
+      :return None: None
+
+
+   .. py:method:: add_string(type: int, value: str) -> None
+
+      Add string to packet.
+
+      :param int type: type
+      :param str value: value
+      :return None: None
+
+
+   .. py:method:: add_int(type: int, value: int) -> None
+
+      Add integer to packet.
+
+      :param int type: type
+      :param int value: value
+      :return None: None
+
+
+   .. py:method:: add_from_dict(values: dict) -> None
+
+      Add packets from dictionary.
+
+      :param dict values: type as key, value as item
+      :return None: None
+
+
+

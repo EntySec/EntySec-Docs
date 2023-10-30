@@ -1,0 +1,30 @@
+:py:mod:`pex.proto.channel.tools`
+=================================
+
+.. py:module:: pex.proto.channel.tools
+
+
+Module Contents
+---------------
+
+.. py:class:: ChannelTools
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.channel module.
+
+   This subclass of pex.proto.channel module is intended for providing
+   some Channel tools.
+
+   .. py:method:: token_extract(data: bytes, token: bytes) -> Tuple[bytes, bytes]
+      :staticmethod:
+
+      Extract token from data received from channel.
+
+      :param bytes data: data
+      :param bytes token: token to extract
+      :return Tuple[bytes, bytes]: data before and data after token (stash)
+
+
+

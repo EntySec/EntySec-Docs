@@ -1,0 +1,49 @@
+:py:mod:`pex.string.bit_reader`
+===============================
+
+.. py:module:: pex.string.bit_reader
+
+
+Module Contents
+---------------
+
+.. py:class:: BitReader(data_bytes: bytes)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.string module.
+
+   This subclass of pex.string module is intended for providing
+   BitReader Python implementation.
+
+   .. py:method:: get_bit() -> int
+
+      Get represented bit.
+
+      :return int: represented bit
+
+
+   .. py:method:: get_bits(num: int) -> int
+
+      Get represented bits depending on given number.
+
+      :param int num: number
+      :return int: represented bit
+
+
+   .. py:method:: get_byte() -> int
+
+      Get represented byte.
+
+      :return int: represented byte
+
+
+   .. py:method:: __len__() -> int
+
+      Get lenght of represented bits.
+
+      :return int: length of represented bits
+
+
+

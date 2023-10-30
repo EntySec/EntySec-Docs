@@ -1,0 +1,99 @@
+:py:mod:`pex.ssl.openssl`
+=========================
+
+.. py:module:: pex.ssl.openssl
+
+
+Module Contents
+---------------
+
+.. py:class:: OpenSSL
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.ssl module.
+
+   This subclass of pex.ssl module is intended for providing
+   Python realization of OpenSSL library.
+
+   .. py:method:: wrap_client(client: socket.socket, keyfile: str = 'hatsploit.key', certfile: str = 'hatsploit.crt', protocol: ssl._SSLMethod = ssl.PROTOCOL_TLS, expire: int = 365, nodename: str = 'HatSploit', country: str = 'US', state: str = 'HatSploit', location: str = 'HatSploit', organization: str = 'HatSploit', unit: str = 'HatSploit', server: bool = True) -> ssl.SSLSocket
+
+      Generate a certificate and wrap a socket with it.
+
+      :param socket.socket client: socket client
+      :param str keyfile: path to the output key file
+      :param str certfile: path to the output certificate file
+      :param ssl._SSLMethod protocol: protocol type
+      :param int expire: certificate expiration limit
+      :param str nodename: certificate nodename
+      :param str country: certificate country
+      :param str state: certificate state
+      :param str location: certificate location
+      :param str organization: certificate organization
+      :param str unit: certificate unit
+      :param bool server: True if server side else False
+      :return ssl.SSLSocket: wrapped socket
+
+
+   .. py:method:: write_key(key: OpenSSL.crypto.PKey, filename: str) -> None
+
+      Write generated key to a file.
+
+      :param crypto.PKey key: generated key to write
+      :param str filename: name of file to write to
+      :return None: None
+
+
+   .. py:method:: write_cert(cert: OpenSSL.crypto.X509, filename: str) -> None
+
+      Write generated certificate to a file.
+
+      :param crypto.X509 cert: generated certificate to write
+      :param str filename: name of file to write to
+      :return None: None
+
+
+   .. py:method:: dump_key(key: OpenSSL.crypto.PKey) -> bytes
+      :staticmethod:
+
+      Dump generated key contents.
+
+      :param crypto.PKey key: generated key to dump
+      :return bytes: generated key contents
+
+
+   .. py:method:: dump_cert(cert: OpenSSL.crypto.X509) -> bytes
+      :staticmethod:
+
+      Dump generated certificate contents.
+
+      :param crypto.X509 cert: generated certificate to dump
+      :return bytes: generated certificate contents
+
+
+   .. py:method:: generate_key() -> OpenSSL.crypto.PKey
+      :staticmethod:
+
+      Generate key.
+
+      :return crypto.PKey: generated key
+
+
+   .. py:method:: generate_cert(key: OpenSSL.crypto.PKey, expire: int = 365, nodename: str = 'HatSploit', country: str = 'US', state: str = 'HatSploit', location: str = 'HatSploit', organization: str = 'HatSploit', unit: str = 'HatSploit') -> OpenSSL.crypto.X509
+      :staticmethod:
+
+      Generate certificate.
+
+      :param crypto.PKey key: generated key
+      :param int expire: certificate expiration limit
+      :param str nodename: certificate nodename
+      :param str country: certificate country
+      :param str state: certificate state
+      :param str location: certificate location
+      :param str organization: certificate organization
+      :param str unit: certificate unit
+      :return crypto.X509: generated certificate
+
+
+

@@ -1,0 +1,61 @@
+:py:mod:`pex.exe`
+=================
+
+.. py:module:: pex.exe
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   syringe/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   dll/index.rst
+   dylib/index.rst
+   elf/index.rst
+   macho/index.rst
+   pe/index.rst
+
+
+Package Contents
+----------------
+
+.. py:class:: EXE
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.exe module.
+
+   This main class of pex.exe module is intended for providing
+   some implementations of executable file manipulation methods.
+
+   .. py:method:: check_executable(data: bytes, executable: str = '') -> bool
+
+      Check if data is an executable.
+
+      :param bytes data: data to check
+      :param str executable: executable format
+      :return bool: True if data is an executable
+
+
+   .. py:method:: executable_replace(data: bytes, dst: bytes, src: bytes) -> bytes
+
+      Replace string in executable with content.
+
+      :param bytes data: executable to replace string in
+      :param bytes dst: string to replace with content
+      :param bytes src: content to replace string with
+      :return bytes: processed executable
+
+
+

@@ -1,0 +1,15 @@
+:py:mod:`pex.craft`
+===================
+
+.. py:module:: pex.craft
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   x64/index.rst
+
+

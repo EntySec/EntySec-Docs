@@ -1,0 +1,70 @@
+:py:mod:`pex.proto.tcp.listener`
+================================
+
+.. py:module:: pex.proto.tcp.listener
+
+
+Module Contents
+---------------
+
+.. py:class:: TCPListener(host: str, port: int, timeout: int = 10)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.tcp module.
+
+   This subclass of pex.proto.tcp module represents Python
+   implementation of TCP listener.
+
+   .. py:method:: listen() -> None
+
+      Start TCP listener.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: stop() -> None
+
+      Stop TCP listener.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: accept() -> None
+
+      Accept connection.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: disconnect() -> None
+
+      Disconnect connected socket.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: send(data: bytes) -> None
+
+      Send data to the connected socket.
+
+      :param bytes data: data to send
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: recv(size: int) -> bytes
+
+      Read data from the connected socket.
+
+      :param int size: size of data
+      :return bytes: read data
+      :raises RuntimeError: with trailing error message
+
+
+

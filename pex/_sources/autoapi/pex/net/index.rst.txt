@@ -1,0 +1,115 @@
+:py:mod:`pex.net`
+=================
+
+.. py:module:: pex.net
+
+
+Package Contents
+----------------
+
+.. py:class:: Net
+
+
+   Bases: :py:obj:`object`
+
+   Main of pex.net module.
+
+   This main of pex.net module is intended for providing some
+   implementations of various network tools.
+
+   .. py:method:: get_hosts() -> list
+      :staticmethod:
+
+      Get all hosts available on the system.
+
+      :return list: network hosts available on the system.
+
+
+   .. py:method:: get_gateways() -> list
+      :staticmethod:
+
+      Get all network interfaces available on the system.
+
+      :return list: network gateways available on the system
+
+
+   .. py:method:: get_gateway_hosts(gateway: str) -> list
+      :staticmethod:
+
+      Get all hosts from gateway.
+
+      :param str gateway: gateway
+      :return list: hosts
+
+
+   .. py:method:: get_host_alive(host: str, method: str = 'arp') -> scapy.all.Union[str, bool, None]
+
+      Check if host is alive.
+
+      :param str host: host to check
+      :return Union[str, bool, None]: mac address for arp, True for icmp, None for error
+
+
+   .. py:method:: get_top_ports(host: str) -> dict
+
+      Scan host for top opened ports.
+
+      :param str host: host to scan
+      :return dict: port and service
+
+
+   .. py:method:: get_host_port(host: str, port: int) -> bool
+
+      Check if port is opened on host.
+
+      :param str host: host
+      :param int port: port
+      :return bool: True if opened, False if closed or filtered
+
+
+   .. py:method:: get_ports(host: str, start: int = 0, end: int = 65535) -> dict
+
+      Scan host for opened ports.
+
+      :param str host: host to scan for opened ports
+      :param int start: first port
+      :param int end: final port
+      :return dict: dictionary of port and service name
+
+
+   .. py:method:: get_vendor(mac: str) -> str
+
+      Get vendor by MAC address.
+
+      :param str mac: MAC address
+      :return str: vendor name
+
+
+   .. py:method:: get_dns(host: str) -> str
+      :staticmethod:
+
+      Get local DNS name by host.
+
+      :param str host: host to get local DNS name by
+      :return str: local DNS name
+
+
+   .. py:method:: get_platform(host: str, port: int) -> scapy.all.Tuple[str, str]
+
+      Detect platform by host.
+
+      :param str host: host to detect platform by
+      :param int port: port to detect platform by
+      :return Tuple[str, str]: platform name and version
+
+
+   .. py:method:: get_platform_by_ports(host: str, ports: list) -> scapy.all.Tuple[str, str]
+
+      Detect platform by a list of ports.
+
+      :param str host: host
+      :param list ports: list of ports
+      :return Tuple[str, str]: platform name and version
+
+
+

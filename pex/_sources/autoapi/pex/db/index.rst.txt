@@ -1,0 +1,79 @@
+:py:mod:`pex.db`
+================
+
+.. py:module:: pex.db
+
+
+Package Contents
+----------------
+
+.. py:class:: DB
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.db module.
+
+   This main class of pex.db module is intended for providing
+   implementations of some database parsing methods.
+
+   .. py:method:: parse_addressbook(database: str) -> list
+      :staticmethod:
+
+      Parse Apple iOS addressbook database.
+
+      :param str database: path to the database to parse
+      :return list: list of entries from addressbook database
+
+
+   .. py:method:: parse_safari_history(database: str) -> list
+      :staticmethod:
+
+      Parse Apple iOS Safari history database.
+
+      :param str database: path to the database to parse
+      :return list: list of entries from Safari history database
+
+
+   .. py:method:: parse_safari_bookmarks(database: str) -> list
+      :staticmethod:
+
+      Parse Apple iOS Safari bookmarks database.
+
+      :param str database: path to the database to parse
+      :return list: list of entries from Safari bookmarks database
+
+
+   .. py:method:: parse_whatsapp_chat(database: str, partner: str) -> list
+      :staticmethod:
+
+      Parse WhatsApp chat database for specified partner.
+
+      :param str database: path to the database to parse
+      :param str partner: partner to parse chat for
+      :return list: list of entries from WhatsApp chat database
+          for specified partner
+
+
+   .. py:method:: parse_sms_chat(database: str, partner: str, imessage: bool = True) -> list
+      :staticmethod:
+
+      Parse Apple SMS or iMessage chat database for specified partner.
+
+      :param str database: path to the database to parse
+      :param str partner: partner to parse chat for
+      :param bool imessage: is chat from iMessage or not
+      :return list: list of entries from Apple SMS or iMessage chat database
+          for specified partner
+
+
+   .. py:method:: parse_voicemail_chat(database: str) -> list
+      :staticmethod:
+
+      Parse Apple iOS voicemail chat database.
+
+      :param str database: path to the database to parse
+      :return list: list of entries from Apple iOS voicemail database
+
+
+

@@ -1,0 +1,45 @@
+:py:mod:`pex.proto.ssh.client`
+==============================
+
+.. py:module:: pex.proto.ssh.client
+
+
+Module Contents
+---------------
+
+.. py:class:: SSHClient(host: str, port: int, username: Optional[str] = None, password: Optional[str] = None, timeout: int = 10)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.ssh module.
+
+   This subclass of pex.proto.ssh module represents Python
+   implementation of the SSH client.
+
+   .. py:method:: connect() -> None
+
+      Connect to SSH socket.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: disconnect() -> None
+
+      Disconnect from SSH socket.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: send_command(command: str) -> str
+
+      Send command to the SSH socket.
+
+      :param str command: command to send
+      :return str: command output
+      :raises RuntimeError: with trailing error message
+
+
+

@@ -1,0 +1,40 @@
+:py:mod:`pex.post.tools`
+========================
+
+.. py:module:: pex.post.tools
+
+
+Module Contents
+---------------
+
+.. py:class:: PostTools
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.post module.
+
+   This subclass of pex.post module is intended for providing
+   implementations of some helpful tools for pex.post.
+
+   .. py:method:: bytes_to_octal(bytes_obj: bytes, extra_zero: bool = False) -> str
+      :staticmethod:
+
+      Convert bytes to their octal representation.
+
+      :param bytes bytes_obj: bytes to convert
+      :param bool extra_zero: add extra_zero to the result
+      :return str: octal representation of bytes
+
+
+   .. py:method:: post_payload(sender: Callable[Ellipsis, str], payload: Union[str, bytes]) -> str
+      :staticmethod:
+
+      Post command to sender and receive the result.
+
+      :param Callable[..., Any] sender: sender function
+      :param Union[str, bytes] payload: command to post
+      :return str: post command result
+
+
+

@@ -1,0 +1,38 @@
+:py:mod:`pex.exe.dylib`
+=======================
+
+.. py:module:: pex.exe.dylib
+
+
+Module Contents
+---------------
+
+.. py:class:: Dylib
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.exe module.
+
+   This subclass of pex.exe module is intended for providing
+   an implementation of macOS dynamic library generator.
+
+   .. py:method:: check_dylib(data: bytes) -> bool
+
+      Check if data is a macOS dynamic library.
+
+      :param bytes data: data to check
+      :return bool: True if data is a macOS dynamic library
+
+
+   .. py:method:: pack_dylib(arch: Union[pex.arch.types.Arch, str], data: bytes) -> bytes
+
+      Pack data to a macOS dynamic library.
+
+      :param Union[Arch, str] arch: architecture to pack for
+      :param bytes data: data to pack
+      :return bytes: packed macOS dynamic library
+      :raises RuntimeError: with trailing error message
+
+
+

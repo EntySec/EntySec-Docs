@@ -1,0 +1,56 @@
+:py:mod:`pex.socket`
+====================
+
+.. py:module:: pex.socket
+
+
+Package Contents
+----------------
+
+.. py:class:: Socket
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.socket module.
+
+   This main class of pex.socket module is intended for providing
+   implementations of socket features.
+
+   .. py:method:: pack_host(host: str, endian: str = 'little') -> bytes
+
+      Pack host into binary form.
+
+      :param str host: host to pack
+      :param str endian: byte order (little or big)
+      :return bytes: packed host
+
+
+   .. py:method:: pack_port(port: int, endian: str = 'little') -> bytes
+
+      Pack port into binary form.
+
+      :param int port: port to pack
+      :param str endian: byte order (little or big)
+      :return bytes: packed port
+
+
+   .. py:method:: port(port: int) -> int
+      :staticmethod:
+
+      Convert port using htons().
+
+      :param int port: port to convert
+      :return int: converted port
+
+
+   .. py:method:: host(host: str) -> int
+      :staticmethod:
+
+      Convert host using inet_aton().
+
+      :param str host: host to convert
+      :return int: converted host
+
+
+

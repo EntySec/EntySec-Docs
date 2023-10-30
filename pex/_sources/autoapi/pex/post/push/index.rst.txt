@@ -1,0 +1,43 @@
+:py:mod:`pex.post.push`
+=======================
+
+.. py:module:: pex.post.push
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   bash_echo/index.rst
+   certutil/index.rst
+   echo/index.rst
+   printf/index.rst
+
+
+Package Contents
+----------------
+
+.. py:class:: Push
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.post.push module.
+
+   This main class of pex.post.push module is intended for providing
+   implementations of some functions for pushing files to sender.
+
+   .. py:method:: push(platform: Union[pex.platform.types.Platform, str], location: str, method: pex.platform.types.Optional[str] = None, *args, **kwargs) -> str
+
+      Push file to sender.
+
+      :param Union[Platform, str] platform: sender platform
+      :param str location: location of file to push data to
+      :param Optional[str] method: push method (see self.push_methods)
+      :return str: location of pushed file
+      :raises RuntimeError: with trailing error message
+
+
+

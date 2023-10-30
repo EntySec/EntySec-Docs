@@ -1,0 +1,40 @@
+:py:mod:`pex.exe.dll`
+=====================
+
+.. py:module:: pex.exe.dll
+
+
+Module Contents
+---------------
+
+.. py:class:: DLL
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.exe module.
+
+   This subclass of pex.exe module is intended for providing
+   an implementation of Windows dynamic library generator.
+
+   .. py:method:: check_dll(data: bytes) -> bool
+
+      Check if data is a Windows dynamic library.
+
+      :param bytes data: data to check
+      :return bool: True if data is a Windows dynamic library
+
+
+   .. py:method:: pack_dll(arch: Union[pex.arch.types.Arch, str], data: bytes, dll_inj_funcs: list = [], filename: str = 'kernel32') -> bytes
+
+      Pack data to a Windows dynamic library.
+
+      :param Union[Arch, str] arch: architecture to pack for
+      :param bytes data: data to pack
+      :param list dll_inj_funcs: list of functions to inject
+      :param str filename: filename specified in dynamic library
+      :return bytes: packed Windows dynamic library
+      :raises RuntimeError: with trailing error message
+
+
+

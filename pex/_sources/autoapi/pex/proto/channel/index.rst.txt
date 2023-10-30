@@ -1,0 +1,16 @@
+:py:mod:`pex.proto.channel`
+===========================
+
+.. py:module:: pex.proto.channel
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   client/index.rst
+   tools/index.rst
+
+

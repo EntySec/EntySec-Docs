@@ -1,0 +1,48 @@
+:py:mod:`pex.exe.elf`
+=====================
+
+.. py:module:: pex.exe.elf
+
+
+Module Contents
+---------------
+
+.. py:class:: ELF
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.exe module.
+
+   This subclass of pex.exe module is intended for providing
+   an implementation of Linux executable and linkable format generator.
+
+   .. py:method:: check_elf(data: bytes) -> bool
+
+      Check if data is a Linux executable and linkable format.
+
+      :param bytes data: data to check
+      :return bool: True if data is a Linux executable and linkable format
+
+
+   .. py:method:: elf_header(data: bytes) -> dict
+      :staticmethod:
+
+      Get ELF file data header.
+
+      :param bytes data: data to parse
+      :return dict: header, header names as keys and
+          header offsets as items
+
+
+   .. py:method:: pack_elf(arch: Union[pex.arch.types.Arch, str], data: bytes) -> bytes
+
+      Pack data to a Linux executable and linkable format.
+
+      :param Union[Arch, str] arch: architecture to pack for
+      :param bytes data: data to pack
+      :return bytes: packed Linux executable and linkable format
+      :raises RuntimeError: with trailing error message
+
+
+

@@ -1,0 +1,43 @@
+:py:mod:`pex.proto.stream.client`
+=================================
+
+.. py:module:: pex.proto.stream.client
+
+
+Module Contents
+---------------
+
+.. py:class:: StreamClient(path: str, image: str)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.stream module.
+
+   This subclass of pex.proto.stream module is intended for providing
+   an implementation of streamer for streaming video and audio.
+
+   .. py:method:: create_audio() -> None
+
+      Create audio streamer and write it to html file from path.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: create_video() -> None
+
+      Create video streamer and write it to html file from path.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: stream() -> None
+
+      Open web page of streamer.
+
+      :return None: None
+
+
+

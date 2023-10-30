@@ -1,0 +1,64 @@
+:py:mod:`pex.proto.rtsp.client`
+===============================
+
+.. py:module:: pex.proto.rtsp.client
+
+
+Module Contents
+---------------
+
+.. py:class:: RTSPClient(host: str, port: int, timeout: int = 10)
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.proto.rtsp module.
+
+   This subclass of pex.proto.rtsp module represents Python
+   implementation of the RTSP client.
+
+   .. py:method:: connect() -> None
+
+      Connect to RTSP socket.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: disconnect() -> None
+
+      Disconnect from RTSP socket.
+
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: authorize(username: str, password: str) -> None
+
+      Authorize in the RTSP socket.
+
+      :param str username: RTSP username
+      :param str password: RTSP password
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: send(data: bytes) -> None
+
+      Send data to the socket.
+
+      :param bytes data: data to send
+      :return None: None
+      :raises RuntimeError: with trailing error message
+
+
+   .. py:method:: recv(size: int) -> bytes
+
+      Read data from the socket.
+
+      :param int size: size of data
+      :return bytes: read data
+      :raises RuntimeError: with trailing error message
+
+
+

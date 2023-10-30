@@ -1,0 +1,41 @@
+:py:mod:`pex.assembler`
+=======================
+
+.. py:module:: pex.assembler
+
+
+Package Contents
+----------------
+
+.. py:class:: Assembler
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.assembler module.
+
+   This main class of pex.assembler module is intended for providing
+   an implementation of native assembler.
+
+   .. py:method:: assemble(arch: Union[pex.arch.types.Arch, str], code: str, mode: str = '', syntax: str = 'intel') -> bytes
+
+      Assemble code for the specified architecture.
+
+      :param Union[Arch, str] arch: architecture to assemble for
+      :param str code: code to assemble
+      :param str mode: special assembler mode
+      :param str syntax: special assembler syntax
+      :return bytes: assembled code for the specified architecture
+
+
+   .. py:method:: hexdump(code: bytes, length: int = 16, sep: str = '.') -> list
+
+      Dump assembled code as hex.
+
+      :param bytes code: assembled code to dump as hex
+      :param int length: length of each string
+      :param str sep: non-printable chars replacement
+      :return list: list of hexdump strings
+
+
+

@@ -1,0 +1,17 @@
+:py:mod:`pex.arch`
+==================
+
+.. py:module:: pex.arch
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   sparc/index.rst
+   types/index.rst
+   x86/index.rst
+
+

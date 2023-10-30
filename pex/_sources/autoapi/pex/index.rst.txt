@@ -1,0 +1,30 @@
+:py:mod:`pex`
+=============
+
+.. py:module:: pex
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   arch/index.rst
+   assembler/index.rst
+   craft/index.rst
+   db/index.rst
+   exe/index.rst
+   fs/index.rst
+   net/index.rst
+   nop/index.rst
+   platform/index.rst
+   post/index.rst
+   proto/index.rst
+   socket/index.rst
+   ssl/index.rst
+   string/index.rst
+   text/index.rst
+   type/index.rst
+
+

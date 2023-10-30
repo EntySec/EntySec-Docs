@@ -1,0 +1,18 @@
+:py:mod:`pex.string.lzs_decompress`
+===================================
+
+.. py:module:: pex.string.lzs_decompress
+
+
+Module Contents
+---------------
+
+.. py:function:: LZSDecompress(data: bytes, window: pex.string.ring_list.RingList = RingList(2048)) -> Tuple[bytes, list]
+
+   Decompress LZS compressed data.
+
+   :param bytes data: LZS compressed data to decompress
+   :param RingList window: RingList list
+   :return Tuple[bytes, list]: decompressed data and RingList
+
+

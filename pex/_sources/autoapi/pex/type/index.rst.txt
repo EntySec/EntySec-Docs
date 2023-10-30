@@ -1,0 +1,29 @@
+:py:mod:`pex.type`
+==================
+
+.. py:module:: pex.type
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   casting/index.rst
+
+
+Package Contents
+----------------
+
+.. py:class:: Type
+
+
+   Bases: :py:obj:`object`
+
+   Main class of pex.type module.
+
+   This main class of pex.type module is intended for providing
+   some important constants and type casting methods.
+
+

@@ -1,0 +1,38 @@
+:py:mod:`pex.exe.pe`
+====================
+
+.. py:module:: pex.exe.pe
+
+
+Module Contents
+---------------
+
+.. py:class:: PE
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.exe module.
+
+   This subclass of pex.exe module is intended for providing
+   an implementation of Windows portable executable generator.
+
+   .. py:method:: check_pe(data: bytes) -> bool
+
+      Check if data is a Windows portable executable.
+
+      :param bytes data: data to check
+      :return bool: True if data is a Windows portable executable
+
+
+   .. py:method:: pack_pe(arch: Union[pex.arch.types.Arch, str], data: bytes) -> bytes
+
+      Pack data to a Windows portable executable.
+
+      :param Union[Arch, str] arch: architecture to pack for
+      :param bytes data: data to pack
+      :return bytes: packed Windows portable executable
+      :raises RuntimeError: with trailing error message
+
+
+

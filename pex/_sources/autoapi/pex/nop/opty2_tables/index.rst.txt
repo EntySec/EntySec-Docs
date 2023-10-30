@@ -1,0 +1,20 @@
+:py:mod:`pex.nop.opty2_tables`
+==============================
+
+.. py:module:: pex.nop.opty2_tables
+
+
+Module Contents
+---------------
+
+.. py:class:: Opty2Tables
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.nop module.
+
+   This subclass of pex.nop module is intended for providing
+   Opty2 NOP sled tables used to generate Opty2 NOP sled.
+
+

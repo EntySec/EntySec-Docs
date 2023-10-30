@@ -1,0 +1,244 @@
+:py:mod:`pex.arch.x86`
+======================
+
+.. py:module:: pex.arch.x86
+
+
+Module Contents
+---------------
+
+.. py:class:: X86
+
+
+   Bases: :py:obj:`object`
+
+   Subclass of pex.arch module.
+
+   This subclass of pex.arch module is intended for providing
+   implementations of some x86 architecture features.
+
+   .. py:method:: get_reg_num(reg: str) -> int
+
+      Get register number from a register name.
+
+      :param str reg: register name
+      :return int: register number
+
+
+   .. py:method:: jmp_reg(dest: str) -> bytes
+
+      Pack jmp x86 assembler instruction.
+
+      :param str dest: destination register name
+      :return bytes: packed jmp x86 assembler instruction
+
+
+   .. py:method:: pack_dword(num: int) -> bytes
+      :staticmethod:
+
+      Pack integer as double word.
+
+      :param int num: integer to pack
+      :return bytes: packed dword
+
+
+   .. py:method:: pack_word(num: int) -> bytes
+      :staticmethod:
+
+      Pack integer as word.
+
+      :param int num: integer to pack
+      :return bytes: packed word
+
+
+   .. py:method:: pack_lsb(num: int) -> bytes
+
+      Pack integer as least significant bit.
+
+      :param int num: integer to pack
+      :return bytes: packed lsb
+
+
+   .. py:method:: unpack_dword(dword: bytes) -> int
+      :staticmethod:
+
+      Unpack double word as integer.
+
+      :param bytes dword: double word to unpack
+      :return int: unpacked integer
+
+
+   .. py:method:: unpack_word(word: bytes) -> int
+      :staticmethod:
+
+      Unpack word as integer.
+
+      :param bytes word: word to unpack
+      :return int: unpacked integer
+
+
+   .. py:method:: push_byte(byte: int) -> bytes
+      :staticmethod:
+
+      Pack push byte x86 assembler instruction.
+
+      :param int byte: integer to pack as byte and push
+      :return bytes: packed push byte x86 assembler instruction
+
+
+   .. py:method:: mov_byte(byte: int, dest: str) -> bytes
+
+      Pack mov byte x86 assembler instruction.
+
+      :param int byte: int to pack as byte and mov
+      :param str dest: destination register name
+      :return bytes: packed mov byte x86 assembler instruction
+
+
+   .. py:method:: mov_word(num: int, dest: str) -> bytes
+
+      Pack mov word x86 assembler instruction.
+
+      :param int num: integer to pack as word and mov
+      :param str dest: destination register name
+      :return bytes: packed mov word x86 assembler instruction
+
+
+   .. py:method:: mov_dword(num: int, dest: str) -> bytes
+
+      Pack mov dword x86 assembler instruction.
+
+      :param int num: integer to pack as dword and mov
+      :param str dest: destination register name
+      :return bytes: packed mov dword x86 assembler instruction
+
+
+   .. py:method:: push_dword(num: int) -> bytes
+
+      Pack push dword x86 assembler instruction.
+
+      :param int num: integer to pack as dword and push
+      :return bytes: packed push dword x86 assembler instruction
+
+
+   .. py:method:: push_word(num: int) -> bytes
+
+      Pack push word x86 assembler instruction.
+
+      :param int num: integer to pack as word and push
+      :return bytes: packed push word x86 assembler instruction
+
+
+   .. py:method:: pop_dword(dest: str) -> bytes
+
+      Pack pop dword x86 assembler instruction.
+
+      :param str dest: destination register name
+      :return bytes: packed pop dword x86 assembler instruction
+
+
+   .. py:method:: dword_adjust(dword: bytes, num: int = 0) -> bytes
+
+      Adjust an integer to a double word.
+
+      :param bytes dword: double word to adjust to
+      :param int num: integer to adjust
+      :return bytes: dword with adjusted integer
+
+
+   .. py:method:: word_adjust(word: bytes, num: int = 0) -> bytes
+
+      Adjust an integer to a word.
+
+      :param bytes word: word to adjust to
+      :param int num: integer to adjust
+      :return bytes: word with adjusted integer
+
+
+   .. py:method:: loop(offset: int) -> bytes
+
+      Pack loop x86 assembler instruction.
+
+      :param int offset: loop x86 assembler instruction offset
+      :return bytes: packed loop x86 assembly instruction
+
+
+   .. py:method:: jmp(addr: int) -> bytes
+
+      Pack jmp x86 assembler instruction.
+
+      :param int addr: address to jump to
+      :return bytes: packed jmp x86 assembler instruction
+
+
+   .. py:method:: jmp_short(addr: int) -> bytes
+
+      Pack jmp short x86 assembler instruction.
+
+      :param int addr: address to jump to
+      :return bytes: packed jmp short x86 assembler instruction
+
+
+   .. py:method:: call(addr: int) -> bytes
+
+      Pack call x86 assembler instruction.
+
+      :param int addr: address to call
+      :return bytes: packed call x86 assembler instruction
+
+
+   .. py:method:: rel_number(num: int, delta: int = 0) -> int
+      :staticmethod:
+
+      Get a number offset to the supplied string.
+
+      :param int num: number
+      :param int delta: delta to add to a result
+      :return int: offset
+
+
+   .. py:method:: copy_to_stack(length: int) -> bytes
+
+      Generate a buffer that will copy memory immediately following
+      the stub that is generated to be copied to the stack.
+
+      :param int length: length of a stub
+      :return bytes: buffer that will copy memory immediately following
+          the stub that us generated to be copied to the stack
+
+
+   .. py:method:: searcher(tag: bytes) -> bytes
+
+      Generate a tag-based search routine.
+
+      :param bytes tag: tag to search for
+      :return bytes: tag-based search routine
+
+
+   .. py:method:: encode_effective(shift: int, reg: str) -> bytes
+
+      Generate encoded effective value for a register.
+
+      :param int shift: effective encoding shift
+      :param str reg: register name
+      :return bytes: encoded effective value
+
+
+   .. py:method:: encode_modrm(src: str, dest: str) -> bytes
+
+      Generate mod r/m characted for a source and destination registers.
+
+      :param str src: source register name
+      :param str dest: destination register name
+      :return bytes: mod r/m character
+
+
+   .. py:method:: fpu_instructions() -> list
+      :staticmethod:
+
+      Get all floating-point unit x86 assembler instructions.
+
+      :return list: list of FPU instructions as bytes
+
+
+
